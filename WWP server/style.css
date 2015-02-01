@@ -1,0 +1,36 @@
+body
+{
+	background-color:#8bcefa;
+}
+input
+{
+    
+    color:yellow;
+	background-color:#8bcefa;
+	border: 1px solid white;
+}
+input:focus
+{
+	/*border-color:white;*/
+	border: 1px solid white;
+	outline: none;
+}
+.window
+{
+	margin:auto;
+	margin-top:50px;
+	background-image: url('backdrop.bmp');
+	background-repeat:no-repeat;
+	width:640px;
+	height:480px;
+	padding-right:10%;
+	padding-top:5%;
+}
+.dialog
+{
+	margin:auto;
+	width:200px;
+	color:white;
+	padding:5%;
+	background-color:#000040;
+}

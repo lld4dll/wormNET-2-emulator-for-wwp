@@ -1,0 +1,30 @@
+This is a private server for Worms World Party game - WormNET2
+
+The following orders to install server are the following:
+
+1) Upload the files to your folder named WWPweb(or other name)
+
+2) Go to WelcomeLoginForm.php and change the variable to your folder name where the files are.
+for example:
+$folderPath = "WWPweb"; 
+on UpdatePlayerInfo.php, CreateUserAccount.php, Login.php we need to change the $folderPath variable also to our folder name
+
+Go to install.php page and determine your username and password, the mail is not matter atm.
+
+
+3) The admin pannel is accessed by going to /admin folder
+- go to "set channel modes" and start to set your channels mode on the server there are descriptions on each mode. 
+for further description how the server works you should read our report analysis for the game.(still on TODO list)
+
+4) extract WWP client to the folder where Worms World Party is installed
+
+5) look on the README file inside WWP IRC server folder for set the IRC server for WWP.
+
+6) if we want to change the RSA key we need to do the following steps: (optional)
+
+   - modify the private key on Game.php
+   - modify the public key on WWP client\rsakey.txt 
+
+
+
+

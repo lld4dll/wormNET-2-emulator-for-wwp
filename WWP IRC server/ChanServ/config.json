@@ -1,0 +1,13 @@
+{
+    "channel": {
+        "1": {
+            "name": "#AnythingGoes",
+            "topic": "00 Open games with 'Rope Knocking' allowed & blood fx"
+        },
+        "2": {
+            "name": "#Ranked",
+            "topic": "08 Private Ranked Channel",
+            "password": "password"
+        }
+    }
+}

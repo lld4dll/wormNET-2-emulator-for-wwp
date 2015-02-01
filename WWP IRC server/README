@@ -1,0 +1,18 @@
+== INSTALATION ==
+
+IRC:
+1. Open terminal or your SSH Client if is Dedicated/VPS
+2. Execute: apt-get install libmcrypt-dev
+3. chmod "configure" file to executable.
+4. Execute: ./configure --prefix=/directory/where/you/wanna/it/compiled
+5. Open /directory/where/you/wanna/it/compiled/etc and read refference.conf for your own config
+6. Make ircd.motd inside /directory/where/you/wanna/it/compiled/etc
+7. Back to /directory/where/you/wanna/it/compiled/bin/
+8. Execute: ./ircd
+
+CHANSERV:
+1. Open terminal or your SSH Client if is Dedicated/VPS
+2. Execute: apt-get install php php-cli
+3. Move to the directory where you extracted ChanServ directory
+4. Execute: screen -S ChanServ
+5. Execute: php -f chanserv.php
