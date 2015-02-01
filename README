@@ -5,6 +5,7 @@ The following orders to install server are the following:
 1) Upload the files to your folder named WWPweb(or other name)
 
 2) Go to WelcomeLoginForm.php and change the variable to your folder name where the files are.
+
 for example:
 $folderPath = "WWPweb"; 
 on UpdatePlayerInfo.php, CreateUserAccount.php, Login.php we need to change the $folderPath variable also to our folder name
@@ -12,7 +13,7 @@ on UpdatePlayerInfo.php, CreateUserAccount.php, Login.php we need to change the 
 Go to install.php page and determine your username and password, the mail is not matter atm.
 
 
-3) The admin pannel is accessed by going to /admin folder
+3) The admin panel is accessed by going to /admin folder
 - go to "set channel modes" and start to set your channels mode on the server there are descriptions on each mode. 
 for further description how the server works you should read our report analysis for the game.(still on TODO list)
 
