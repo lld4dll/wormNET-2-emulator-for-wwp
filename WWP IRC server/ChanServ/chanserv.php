@@ -1,20 +1,15 @@
 <?php
-
-	function object_to_array($obj) {
-		$_arr = is_object($obj) ? get_object_vars($obj) : $obj;
-		foreach ($_arr as $key => $val) {
-			$val = (is_array($val) || is_object($val)) ? object_to_array($val) : $val;
-			$arr[$key] = $val;
-		}
-		return $arr;
-	}
-
 	error_reporting('E_ALL');
 	ob_start();
 	ini_set('max_execution_time', 0);
 	ini_set('default_socket_timeout', '10080'); //one week
+	
+	if(!function_exists('mcrypt_generic_init')) {
+		die("mcrypt plugin not found");
+	}
+	
 	$starttime = time();
-	$channels = json_decode(file_get_contents("./config.json"));
+	$channels = json_decode(file_get_contents("./config.json"), true);
 
 	while(1) {
 		$socket = fsockopen("185.25.149.169", "6667", $errno, $errstr, "10") or die($errstr);
@@ -45,9 +40,7 @@
 			include("./authenication.php");
 
 			if($connected == '1' AND $executed == '0') {
-				foreach($channels->channel as $channel) {
-					$channel = object_to_array($channel);
-
+				foreach($channels['channel'] as $channel) {
 					if($channel['password'] == NULL) {
 						fputs($socket,"JOIN ".$channel['name']." \r\n");
 					} else {
