@@ -48,7 +48,7 @@ This page used for log into wwp server from WWP
 		$_SESSION['Username'] = $user;
 		$_SESSION['Password'] = $pass;
 		$_SESSION['IPAddr'] = $_SERVER['REMOTE_ADDR'];
-		$ircServer ="37.233.103.52"; //"our IRC server";
+		$ircServer = "wormnet.steps.club"; //"s1.ct8.pl"; //"our IRC server";
 		$port = "6667";
 		echo "<CONNECT ".$ircServer." IRCPORT=".$port." IRCUSER=".$user." IRCPASS=ELSILRACLIHP>";
 	}
