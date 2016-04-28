@@ -1,13 +1,15 @@
 This is a private server for Worms World Party game - WormNET2
 
-The following orders to install server are the following:
+The following orders to install a server are the following:
 
+1) Upload the files to your folder named WWPweb(or other name)
 
 2) Go to WelcomeLoginForm.php and change the variable to your folder name where the files are.
 
 for example:
 $folderPath = "WWPweb"; 
 on UpdatePlayerInfo.php, CreateUserAccount.php, Login.php we need to change the $folderPath variable also to our folder name
+on wwp\graphics\ServerLobby\ServerList. modify to your server address
 
 Go to install.php page and determine your username and password, the mail is not matter atm.
 
