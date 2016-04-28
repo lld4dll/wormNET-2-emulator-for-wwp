@@ -11,6 +11,7 @@ This page used for log into wwp server from WWP
 		global $con;
 		$user = $con->real_escape_string($user);
 		$pass = $con->real_escape_string($pass);
+		
 		$IPAddress = $con->real_escape_string($IPAddress);
 		$command = "SELECT * FROM `USERS` WHERE UserName='$user' and Password='$pass'";
 		$res = $con->query($command) or die($con->error);
@@ -21,7 +22,8 @@ This page used for log into wwp server from WWP
 			header("SetUserId: ".$UserData['UserID']);
 			header("SetPlayerType: ".$UserData['PlayerType']);
 			header("PlayerLevel: ".$UserData['PlayerLevel']);
-			header("SetPlayerScore: ".$UserData['PlayerScore']);
+			header("SetPlayerScore: ".$UserData['PlayerScore']);		
+		
 			$command = "UPDATE `USERS` SET IPAddress = '$IPAddress' WHERE UserName='$user'";
 			$con->query($command) or die($con->error);
 		}
@@ -46,7 +48,7 @@ This page used for log into wwp server from WWP
 		$_SESSION['Username'] = $user;
 		$_SESSION['Password'] = $pass;
 		$_SESSION['IPAddr'] = $_SERVER['REMOTE_ADDR'];
-		$ircServer ="185.25.149.169"; //"our IRC server";
+		$ircServer ="37.233.103.52"; //"our IRC server";
 		$port = "6667";
 		echo "<CONNECT ".$ircServer." IRCPORT=".$port." IRCUSER=".$user." IRCPASS=ELSILRACLIHP>";
 	}

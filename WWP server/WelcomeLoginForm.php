@@ -7,6 +7,7 @@ This is our login/register page
 	header("Counter:". time());
 	$folderPath = "wormsProject";
 	echo "<WEBADDRESS /".$folderPath."/>\n
+	<RSAPubKey >
 	<EXTENSION .php>\n
 	<FONT Size=1 Colour=0>                               Welcome to WormNet2<BR></FONT>\n
 	<br><br><FONT Size=0 Colour=0>                                 You can use any username / password to log in<BR></FONT>\n
